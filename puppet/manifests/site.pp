@@ -1,9 +1,8 @@
 node default {
-    exec { "apt-get update":
-      path => "/usr/bin",
-    }
+    include base
 }
 
 node 'puppetagent.puppetdebug.vlan' {
+    include base
     include lamp
 }
