@@ -1,0 +1,1 @@
+{"virtualbox":{"/etc/puppetlabs/code/environments/production/":{"guestpath":"/etc/puppetlabs/code/environments/production","hostpath":"/home/isprime/staff/td/code/vagrant-puppet/puppet","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/isprime/staff/td/code/vagrant-puppet","disabled":false,"__vagrantfile":true}}}

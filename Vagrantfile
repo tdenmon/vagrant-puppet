@@ -15,6 +15,8 @@ Vagrant.configure('2') do |config|
     # Use vagrant-auto_network to assign an IP address.
     node.vm.network :private_network, :auto_network => true
 
+    config.vm.synced_folder "puppet/", "/etc/puppetlabs/code/environments/production/"
+
     # Puppet Server requires a bit more memory, so tweak to suit
     node.vm.provider "virtualbox" do |v|
       v.customize [
@@ -59,6 +61,8 @@ Vagrant.configure('2') do |config|
 
     node.vm.network :private_network, :auto_network => true
     node.vm.provision :hosts
+
+    config.vm.network "forwarded_port", guest: 80, host: 3001
 
     # Set up Puppet Agent to automatically connect with Puppet master
     bootstrap_script = <<-EOF
