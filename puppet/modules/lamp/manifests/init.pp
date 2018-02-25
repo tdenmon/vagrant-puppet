@@ -26,7 +26,7 @@ class lamp {
       ensure => running,
     }
 
-    # install php5 package
+    # install php7 package
     package { 'php5':
       require => Exec['apt-update'],        # require 'apt-update' before installing
       ensure => installed,

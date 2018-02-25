@@ -52,6 +52,11 @@ Vagrant.configure('2') do |config|
     fi
     EOF
     node.vm.provision :shell, :inline => bootstrap_script
+
+    puppet_firewall_script = <<-EOF
+    puppet module install puppetlabs-firewall
+    EOF
+    node.vm.provision :shell, :inline => puppet_firewall_script
   end
 
   config.vm.define :puppetagent do |node|

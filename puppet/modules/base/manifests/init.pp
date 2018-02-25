@@ -6,5 +6,5 @@ class base {
     service { 'puppet':
       ensure => 'running',
       enable => 'true',
-    } 
+    }
 }
