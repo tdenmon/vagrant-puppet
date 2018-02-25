@@ -84,6 +84,9 @@ Vagrant.configure('2') do |config|
     fi
     EOF
     node.vm.provision :shell, :inline => bootstrap_script
+
+    config.vm.provision "shell",
+      inline: "reboot"
   end
 
 end
